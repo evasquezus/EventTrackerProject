@@ -23,6 +23,13 @@ public class BookController {
 	@Autowired
 	BookService service;
 
+	
+	@GetMapping(path = "books")
+	public List<Books> index() {
+		List<Books> allBooks = service.getAllBooks();
+		return allBooks;
+	}
+	
 	@DeleteMapping(path = "books/{id}")
 	public void deleteBook(@PathVariable("id") int id) {
 		try {
@@ -31,12 +38,6 @@ public class BookController {
 			e.printStackTrace();
 		}
 
-	}
-
-	@GetMapping(path = "books")
-	public List<Books> index() {
-		List<Books> allBooks = service.getAllBooks();
-		return allBooks;
 	}
 
 	@PostMapping(path = "books/update/{id}")
