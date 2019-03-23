@@ -1,12 +1,16 @@
 package com.skilldistillery.eventtrackerjpa.entities;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Books {
@@ -26,6 +30,10 @@ public class Books {
 
 	@Column(name = "data_of_purchase")
 	private Date dateOfPurchase;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "book")
+	private List<Review> reviews;
 
 	public Books() {
 		super();
@@ -78,6 +86,14 @@ public class Books {
 
 	public void setDateOfPurchase(Date dateOfPurchase) {
 		this.dateOfPurchase = dateOfPurchase;
+	}
+	
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 
 	@Override
