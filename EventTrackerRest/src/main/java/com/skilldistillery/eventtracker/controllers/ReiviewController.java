@@ -37,7 +37,7 @@ public class ReiviewController {
 
 	}
 
-	@PostMapping(path = "review/{id}")
+	@PostMapping(path = "reviews/{id}")
 	public void addReview(@PathVariable("id") int id, HttpServletResponse response) {
 		Review b = repo.getReviewByID(id);
 		if (b.getId() == id) {
