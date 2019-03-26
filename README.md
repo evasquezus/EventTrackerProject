@@ -17,7 +17,7 @@ EventTracker(In Progress)
 
 | Return Type       | Route                                 | Functionality                      |
 |-------------------|---------------------------------------|------------------------------------|
-| `List<Review>`    |`GET api/reviews/                      | Gets all reviews                   |
+| `List<Review>`    |`GET api/reviews/`                     | Gets all reviews                   |
 | `reviews`         |`GET api/reviews/{id}`                 | Gets one reviews by id             |
 | `Post`            |`POST api/reviews/{id}`                | Creates a new review               |
 | `Post`            |`PUT api/reviews/{id}`                 | Updates an existing reviews by id  |
