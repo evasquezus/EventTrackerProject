@@ -3,7 +3,7 @@ EventTracker(In Progress)
 
  REST project based on interest. JPA entities mappings.Postman used to verify controller routes are working.
 
-## REST Routes for Users:
+## REST Routes for Books:
 
 | Return Type   | Route                   | Functionality                  |
 |---------------|-------------------------|--------------------------------|
@@ -13,7 +13,7 @@ EventTracker(In Progress)
 | `Post`        |`PUT api/books/{id}`     | Updates an existing book by id |
 | `Boolean`     |`DELETE api/books/{id}`  | Deletes an existing book by id |
 
-## REST Routes for Schedules:
+## REST Routes for Reviews:
 
 | Return Type       | Route                                 | Functionality                      |
 |-------------------|---------------------------------------|------------------------------------|
