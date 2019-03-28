@@ -19,7 +19,7 @@ EventTracker(In Progress)
 |-------------------|---------------------------------------|------------------------------------|
 | `List<Review>`    |`GET api/reviews/`                     | Gets all reviews                   |
 | `Review`          |`GET api/reviews/{id}`                 | Gets one reviews by id             |
-| `Review`          |`POST api/reviews/{id}`                | Creates a new review               |
+| `Review`          |`POST api/reviews`                     | Creates a new review               |
 | `Review`          |`PUT api/reviews/{id}`                 | Updates an existing reviews by id  |
 | `Boolean`         |`DELETE api/reviews/{id}`              | Deletes an existing reviews by id  |
 
