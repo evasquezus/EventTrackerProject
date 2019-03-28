@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,13 +24,18 @@ public class BookController {
 	@Autowired
 	BookService service;
 
-	
 	@GetMapping(path = "books")
 	public List<Books> index() {
 		List<Books> allBooks = service.getAllBooks();
 		return allBooks;
 	}
-	
+
+	@GetMapping(path = "books/{id}")
+	public Books getIndividualBook(@PathVariable("id") int id) {
+		Books bookRetrived = service.getBookById(id);
+		return bookRetrived;
+	}
+
 	@DeleteMapping(path = "books/{id}")
 	public void deleteBook(@PathVariable("id") int id) {
 		try {
@@ -40,7 +46,7 @@ public class BookController {
 
 	}
 
-	@PostMapping(path = "books/update/{id}")
+	@PutMapping(path = "books/{id}")
 	public Books updateBook(@PathVariable("id") int id, @RequestBody Books updatedBook, HttpServletResponse response) {
 		try {
 			updatedBook = service.updateBook(id, updatedBook);
@@ -54,20 +60,10 @@ public class BookController {
 
 	}
 
-	@PostMapping(path = "books/{id}")
-	public void addBook(@PathVariable("id") int id, HttpServletResponse response) {
-		Books b = service.getBookById(id);
-		if (b.getId() == id) {
-			try {
-				service.deleteBook(id);
-				response.setStatus(204);
-			} catch (Exception e) {
-				e.printStackTrace();
-				response.setStatus(401);
-			}
-		} else {
-			response.setStatus(404);
-		}
+	@PostMapping(path = "books")
+	public Books addBook(@RequestBody Books bookToBeAdded, HttpServletResponse response) {
+		Books newBook = service.createBook(bookToBeAdded);
+		return newBook;
 	}
 
 }
