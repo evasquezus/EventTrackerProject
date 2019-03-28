@@ -8,9 +8,9 @@ EventTracker(In Progress)
 | Return Type   | Route                   | Functionality                  |
 |---------------|-------------------------|--------------------------------|
 | `List<Books>` |`GET api/books/`         | Gets all books                 |
-| `book`        |`GET api/books/{id}`     | Gets one user by id            |
-| `Post`        |`POST api/books/`        | Creates a new book             |
-| `Post`        |`PUT api/books/{id}`     | Updates an existing book by id |
+| `Book`        |`GET api/books/{id}`     | Gets one user by id            |
+| `Book`        |`POST api/books/`        | Creates a new book             |
+| `Book`        |`PUT api/books/{id}`     | Updates an existing book by id |
 | `Boolean`     |`DELETE api/books/{id}`  | Deletes an existing book by id |
 
 ## REST Routes for Reviews:
@@ -19,8 +19,8 @@ EventTracker(In Progress)
 |-------------------|---------------------------------------|------------------------------------|
 | `List<Review>`    |`GET api/reviews/`                     | Gets all reviews                   |
 | `reviews`         |`GET api/reviews/{id}`                 | Gets one reviews by id             |
-| `Post`            |`POST api/reviews/{id}`                | Creates a new review               |
-| `Post`            |`PUT api/reviews/{id}`                 | Updates an existing reviews by id  |
+| `Book`            |`POST api/reviews/{id}`                | Creates a new review               |
+| `Book`            |`PUT api/reviews/{id}`                 | Updates an existing reviews by id  |
 | `Boolean`         |`DELETE api/reviews/{id}`              | Deletes an existing reviews by id  |
 
 ## Technologies used
