@@ -54,7 +54,7 @@ public class BookController {
 			return updatedBook;
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.setStatus(404);
+			response.setStatus(400);
 		}
 		return null;
 
