@@ -8,7 +8,7 @@ EventTracker(In Progress)
 | Return Type   | Route                   | Functionality                  |
 |---------------|-------------------------|--------------------------------|
 | `List<Books>` |`GET api/books/`         | Gets all books                 |
-| `Book`        |`GET api/books/{id}`     | Gets one user by id            |
+| `Book`        |`GET api/books/{id}`     | Gets one book by id            |
 | `Book`        |`POST api/books/`        | Creates a new book             |
 | `Book`        |`PUT api/books/{id}`     | Updates an existing book by id |
 | `Boolean`     |`DELETE api/books/{id}`  | Deletes an existing book by id |
