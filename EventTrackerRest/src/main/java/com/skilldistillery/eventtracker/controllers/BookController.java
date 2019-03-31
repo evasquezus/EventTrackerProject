@@ -66,4 +66,16 @@ public class BookController {
 		return newBook;
 	}
 
+//	@GetMapping(path = "books/search/{title}")
+//	public List<Books> findBookByTitleNameLike(String title) {
+//		String bookTitleContaining = "%" + title + "%";
+//		return service.findBookByTitleNameLike(bookTitleContaining);
+//	}
+//
+//	@GetMapping(path = "books/count/{title}")
+//	public Long countByBookByTitleNameLike(String title) {
+//		String bookTitleContaining = "%" + title + "%";
+//		long count =  service.countByTitle(bookTitleContaining);
+//		return count;
+//	}
 }

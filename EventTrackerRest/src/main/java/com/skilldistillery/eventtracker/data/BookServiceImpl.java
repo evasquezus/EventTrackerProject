@@ -64,4 +64,16 @@ public class BookServiceImpl implements BookService {
 		return deleted;
 	}
 
+//	@Override
+//	public long countByTitle(String title) {
+//		long count = repo.countByTitle(title);
+//		return count;
+//	}
+
+//	@Override
+//	public List<Books> findBookByTitleNameLike(String title) {
+//		String bookTitleContaining = "%" + title + "%";
+//		return repo.findByTitleStartingWith(bookTitleContaining);
+//	}
+
 }

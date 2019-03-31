@@ -10,4 +10,8 @@ public interface BookRepository extends JpaRepository<Books, Integer> {
 
 	List<Books> findByReviews_id(int id);
 
+//	List<Books> findByTitleStartingWith(String title);
+	
+//	long countByTitle(String title);
+	
 }

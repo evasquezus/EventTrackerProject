@@ -15,4 +15,8 @@ public interface BookService {
 	boolean deleteBook(int id);
 
 	Books getBookById(int id);
+	
+//	long countByTitle(String title);
+	
+//	List<Books> findBookByTitleNameLike(String title);
 }
