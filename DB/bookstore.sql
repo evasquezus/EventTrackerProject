@@ -74,12 +74,10 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bookstore`;
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (1, 'In Search of Lost Time', 'Marcel Proust', 'Fiction', NULL);
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (2, 'Don Quixote', 'Miguel de Cervantes', 'Fiction', NULL);
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (3, 'Ulysses', 'James Joyce', NULL, NULL);
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (4, 'The Great Gatsby', 'Scott Fitzgerald', NULL, NULL);
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (5, 'Moby Dick', 'Herman Melville', NULL, NULL);
-INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (6, 'Hamlet', 'William Shakespeare', NULL, NULL);
+INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (1, 'adsadsad', NULL, NULL, NULL);
+INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (2, 'asdadw', NULL, NULL, NULL);
+INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (3, 'qwqwq', NULL, NULL, NULL);
+INSERT INTO `bookstore`.`books` (`id`, `title`, `author_name`, `category`, `data_of_purchase`) VALUES (4, 'tygsrg', NULL, NULL, NULL);
 
 COMMIT;
 
@@ -89,7 +87,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bookstore`;
-INSERT INTO `bookstore`.`review` (`id`, `review_detail`, `books_id`) VALUES (1, 'amazing', 2);
+INSERT INTO `bookstore`.`review` (`id`, `review_detail`, `books_id`) VALUES (1, 'asdasd', 1);
+INSERT INTO `bookstore`.`review` (`id`, `review_detail`, `books_id`) VALUES (2, 'asdasd', NULL);
 
 COMMIT;
 
