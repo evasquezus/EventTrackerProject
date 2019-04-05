@@ -1,9 +1,5 @@
-body {
+body{
 	text-align: center;
-	margin: 0 auto;
-}
-
-form {
-	margin: 0 auto;
-	width: 250px;
+    margin: 0 auto;
+	background-color: antiquewhite;
 }

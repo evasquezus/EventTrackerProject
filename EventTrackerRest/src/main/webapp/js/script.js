@@ -76,7 +76,7 @@ function displayAllBooks(books) {
 		var td6 = document.createElement('button');
 		var td7 = document.createElement('button');
 		td6.textContent = 'Details';
-//		td7.textContent = 'Update';
+		// td7.textContent = 'Update';
 		tr.setAttribute("id", "trMain");
 		td1.setAttribute("id", "Div1");
 		td2.setAttribute("id", "Div2");
@@ -85,8 +85,8 @@ function displayAllBooks(books) {
 		td5.setAttribute("id", "Div5");
 		td6.setAttribute("id", "DeleteTableRow" + i);
 		td7.setAttribute("id", "UpdateTableRow" + i);
-		td6.setAttribute("class", "btn btn-info" );
-//		td7.setAttribute("class", "btn btn-info" );
+		td6.setAttribute("class", "btn btn-info");
+		// td7.setAttribute("class", "btn btn-info" );
 
 		var text1 = document.createTextNode(books[i].id);
 		var text2 = document.createTextNode(books[i].title);
@@ -105,88 +105,87 @@ function displayAllBooks(books) {
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		tr.appendChild(td6);
-//		tr.appendChild(td7);
+		// tr.appendChild(td7);
 
 		table.appendChild(tr);
 	}
 	booksDiv.appendChild(table);
-	deleteAndUpdate();
-
 }
+
 function deleteAndUpdate() {
-	document.getElementById('DeleteTableRow0').addEventListener('click',
+	document.getElementById('DetailTableRow0').addEventListener('click',
 			function(event) {
 				event.preventDefault();
 				alert('ads');
 				onLoad();
 			});
-	document.getElementById('DeleteTableRow1').addEventListener('click',
+	document.getElementById('DetailTableRow1').addEventListener('click',
 			function(event) {
 				event.preventDefault();
-				alert('ads');
+				deleteBook();
 				onLoad();
 			});
-	document.getElementById('DeleteTableRow2').addEventListener('click',
+	document.getElementById('DetailTableRow2').addEventListener('click',
 			function(event) {
 				event.preventDefault();
 				alert('ads');
 				let f = document.deleteBookForm;
 				onLoad();
 			});
-	document.getElementById('DeleteTableRow3').addEventListener('click',
+	document.getElementById('DetailTableRow3').addEventListener('click',
 			function(event) {
 				event.preventDefault();
 				alert('ads');
 				onLoad();
 			});
-	document.getElementById('DeleteTableRow4').addEventListener('click',
+	document.getElementById('DetailTableRow4').addEventListener('click',
 			function(event) {
 				event.preventDefault();
 				alert('ads');
 				onLoad();
 			});
-	document.getElementById('DeleteTableRow5').addEventListener('click',
+	document.getElementById('DetailTableRow5').addEventListener('click',
 			function(event) {
 				event.preventDefault();
 				alert('ads');
 				onLoad();
 			});
-	document.getElementById('UpdateTableRow0').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
-	document.getElementById('UpdateTableRow1').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
-	document.getElementById('UpdateTableRow2').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
-	document.getElementById('UpdateTableRow3').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
-	document.getElementById('UpdateTableRow4').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
-	document.getElementById('UpdateTableRow5').addEventListener('click',
-			function(event) {
-				event.preventDefault();
-				alert("Hello");
-				onLoad();
-			});
+	// document.getElementById('UpdateTableRow0').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
+	// document.getElementById('UpdateTableRow1').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
+	// document.getElementById('UpdateTableRow2').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
+	// document.getElementById('UpdateTableRow3').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
+	// document.getElementById('UpdateTableRow4').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
+	// document.getElementById('UpdateTableRow5').addEventListener('click',
+	// function(event) {
+	// event.preventDefault();
+	// alert("Hello");
+	// onLoad();
+	// });
 
 }
 

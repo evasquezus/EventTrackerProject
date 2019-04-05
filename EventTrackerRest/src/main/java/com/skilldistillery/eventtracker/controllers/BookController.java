@@ -24,19 +24,19 @@ public class BookController {
 	@Autowired
 	BookService service;
 
-	@GetMapping(path = "books")
+	@GetMapping(path ="books")
 	public List<Books> index() {
 		List<Books> allBooks = service.getAllBooks();
 		return allBooks;
 	}
 
-	@GetMapping(path = "books/{id}")
+	@GetMapping(path ="books/{id}")
 	public Books getIndividualBook(@PathVariable("id") int id) {
 		Books bookRetrived = service.getBookById(id);
 		return bookRetrived;
 	}
 
-	@DeleteMapping(path = "books/{id}")
+	@DeleteMapping(path ="books/{id}")
 	public void deleteBook(@PathVariable("id") int id) {
 		try {
 			service.deleteBook(id);
@@ -46,7 +46,7 @@ public class BookController {
 
 	}
 
-	@PutMapping(path = "books/{id}")
+	@PutMapping(path ="books/{id}")
 	public Books updateBook(@PathVariable("id") int id, @RequestBody Books updatedBook, HttpServletResponse response) {
 		try {
 			updatedBook = service.updateBook(id, updatedBook);
@@ -60,7 +60,7 @@ public class BookController {
 
 	}
 
-	@PostMapping(path = "books")
+	@PostMapping(path ="books")
 	public Books addBook(@RequestBody Books bookToBeAdded, HttpServletResponse response) {
 		Books newBook = service.createBook(bookToBeAdded);
 		return newBook;
