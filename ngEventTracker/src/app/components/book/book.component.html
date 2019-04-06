@@ -1,0 +1,29 @@
+<div class="card" *ngFor="let book of books">
+  <div class="container"></div>
+  <h1>Title : {{ book.title }}</h1>
+  <div class="card-body">
+    <ul class="list-unstyled">
+      <li class="card card-body mb-2">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <ul class="list-group">
+                <li class="list-group-item">ID : {{book.id}} </li>
+                <li class="list-group-item">Author :{{book.authorName}}</li>
+                <li class="list-group-item">Category :{{book.category}}</li>
+                <!-- <br>
+                <button class="btn btn-primary">Add a Book</button>
+                <br>
+                <button class="btn btn-primary">Edit Book</button>
+                <br>
+                <button class="btn btn-danger">Delete Book</button> -->
+              </ul>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
