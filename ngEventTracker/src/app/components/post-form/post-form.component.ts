@@ -13,8 +13,10 @@ import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  // @Output() newBook: EventEmitter<Books> = new EventEmitter();
-  // @Input() currentBook: Books;
+  @Output() newBook: EventEmitter<Books> = new EventEmitter();
+  @Output() updatedBook: EventEmitter<Books> = new EventEmitter();
+  @Input() currentBook: Books;
+  @Input() isEdit: boolean;
   constructor(private bookservice: BookService ) { }
   ngOnInit() {
 
@@ -29,12 +31,20 @@ export class PostFormComponent implements OnInit {
       this.bookservice.saveBook({ title, authorName, category} as Books).subscribe
         (book => {
           console.log(book);
+          location.reload();
         }
 
         );
     }
   }
-
+  updateBook() {
+    this.bookservice.updateBook(this.currentBook).subscribe(book => {
+      console.log(book);
+      this.isEdit = false;
+      this.updatedBook.emit(book);
+      // location.reload();
+    });
+  }
 
 }
 

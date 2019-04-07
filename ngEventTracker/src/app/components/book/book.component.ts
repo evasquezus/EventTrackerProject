@@ -10,7 +10,14 @@ import { Title } from '@angular/platform-browser';
 })
 export class BookComponent implements OnInit {
   books: Books[];
-
+  currentBook: Books = {
+    id: 0,
+    title: '',
+    authorName: '',
+    category: '',
+    dateOfPurchase: ''
+  };
+  isEdit: boolean = false;
 
   constructor(private bookservice: BookService) { }
 
@@ -23,30 +30,36 @@ export class BookComponent implements OnInit {
     this.books.unshift(book);
 
   }
+  editBook(book: Books) {
+    this.currentBook = book;
+    this.isEdit = true;
+  }
 
   removeBook(book: Books) {
-    if(confirm('Are You Sure?')) {
-      this.bookservice.removePost(book.id).subscribe(() => {
+    if (confirm('Are You Sure?')) {
+      this.bookservice.removeBook(book.id).subscribe(() => {
         this.books.forEach((cur, index) => {
-          if(book.id === cur.id) {
+          if (book.id === cur.id) {
             this.books.splice(index, 1);
           }
         });
       });
     }
   }
-
-
-  // addBook(title: string, authorName: string, category: string ) {
-  //   if (!title || !authorName || !category ) {
-  //     alert('Please fill the form');
-  //   } else {
-  //     this.bookservice.saveBook({ title, authorName, category} as Books).subscribe(
-  //       books => {
-  //         console.log(books);
-  //       }
-  //     );
-  //   }
-  // }
-
+  onUpdatedBook(book: Books) {
+    this.books.forEach((cur, index) => {
+      if (book.id === cur.id) {
+        this.books.splice(index, 1);
+        this.books.unshift(book);
+        this.isEdit = false;
+        this.currentBook = {
+          id: 0,
+          title: '',
+          authorName: '',
+          category: '',
+          dateOfPurchase: ''
+        }
+      }
+    });
+  }
 }

@@ -22,11 +22,17 @@ export class BookService {
     return this.http.post<Books>(this.bookUrl, book, httpOptions);
   }
 
-  removePost(book: Books | number): Observable<Books> {
+  removeBook(book: Books | number): Observable<Books> {
     const id = typeof book === 'number' ? book : book.id;
     const url = `${this.bookUrl}/${id}`;
 
     return this.http.delete<Books>(url, httpOptions);
+  }
+
+  updateBook(book: Books): Observable<Books> {
+    const url = `${this.bookUrl}/${book.id}`;
+
+    return this.http.put<Books>(url, book, httpOptions);
   }
 
 }

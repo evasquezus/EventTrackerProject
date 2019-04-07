@@ -3,22 +3,25 @@
   <form>
     <div class="form-group">
       <label>Title</label>
-      <input type="text" class="form-control" name="title" #title>
+      <input type="text" class="form-control" [(ngModel)]="currentBook.title"name="title" #title>
     </div>
     <div class="form-group">
       <label>Author Name</label>
-      <input type="text" class="form-control"  name="authorName" #authorName>
+      <input type="text" class="form-control" [(ngModel)]="currentBook.authorName" name="authorName" #authorName>
     </div>
     <div class="form-group">
       <label>Category</label>
-      <input type="text" class="form-control" name="category" #category>
+      <input type="text" class="form-control" [(ngModel)]="currentBook.category" name="category" #category>
     </div>
+    <input type="hidden" [(ngModel)]="currentBook.id" name="id">
     <!-- <div class="form-group">
         <label>Date Of Purchase</label>
         <input type="text" class="form-control" name="dateOfPurchase" #dateOfPurchase>
       </div> -->
-      <input type="button" [swal]="['Nice, thanks for adding a new book!']" (click)="addBook(title.value, authorName.value,category.value)" placeholder="Add Book" class="btn btn-dark">
-      <!-- <button (click)="addBook(title.value, authorName.value,title.category)" class="btn btn-dark">Add Book</button> -->
+      <button *ngIf="!isEdit" (click)="addBook(title.value, authorName.value,category.value)"class="btn btn-dark">Add Book</button>
+      <!-- <input type="button" *ngIf="!isEdit"[swal]="['Nice, thanks for adding a new book!']" (click)="addBook(title.value, authorName.value,category.value)" placeholder="Add Book" class="btn btn-dark"> -->
+      <!-- <input type="button" *ngIf="isEdit"[swal]="['Nice, thanks for adding a new book!']" (click)="updateBook()" placeholder="Edit Book" class="btn btn-dark"> -->
+      <button (click)="updateBook()" *ngIf="isEdit" class="btn btn-dark">Edit Book</button>
 
       <!-- <button (click)="updateBook()" class="btn btn-warning btn-block">Update Book</button> -->
   </form>
