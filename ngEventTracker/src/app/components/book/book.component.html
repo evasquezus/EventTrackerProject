@@ -1,3 +1,4 @@
+<app-post-form (newBook)="onNewBook($event)"></app-post-form>
 <div class="card" *ngFor="let book of books">
   <div class="container"></div>
   <h1>Title : {{ book.title }}</h1>
@@ -11,13 +12,10 @@
                 <li class="list-group-item">ID : {{book.id}} </li>
                 <li class="list-group-item">Author :{{book.authorName}}</li>
                 <li class="list-group-item">Category :{{book.category}}</li>
-                <!-- <br>
-                <button class="btn btn-primary">Add a Book</button>
-                <br>
-                <button class="btn btn-primary">Edit Book</button>
-                <br>
-                <button class="btn btn-danger">Delete Book</button> -->
               </ul>
+              <hr>
+             <button (click)="removeBook(book)"class="btn btn-danger">X</button>
+              <button (click)="editBook(book)"class="btn btn-success">^</button>
             </div>
             <div>
             </div>

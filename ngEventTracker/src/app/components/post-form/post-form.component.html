@@ -1,0 +1,26 @@
+<h2>Add Book</h2>
+<div class="card card-body md-3">
+  <form>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" name="title" #title>
+    </div>
+    <div class="form-group">
+      <label>Author Name</label>
+      <input type="text" class="form-control"  name="authorName" #authorName>
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <input type="text" class="form-control" name="category" #category>
+    </div>
+    <!-- <div class="form-group">
+        <label>Date Of Purchase</label>
+        <input type="text" class="form-control" name="dateOfPurchase" #dateOfPurchase>
+      </div> -->
+      <input type="button" [swal]="['Nice, thanks for adding a new book!']" (click)="addBook(title.value, authorName.value,category.value)" placeholder="Add Book" class="btn btn-dark">
+      <!-- <button (click)="addBook(title.value, authorName.value,title.category)" class="btn btn-dark">Add Book</button> -->
+
+      <!-- <button (click)="updateBook()" class="btn btn-warning btn-block">Update Book</button> -->
+  </form>
+</div>
+

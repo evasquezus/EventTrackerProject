@@ -8,4 +8,20 @@
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  font: 14px/24px "Gotham Rounded A", "Gotham Rounded B", "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #edeff0;
+  color: black;
 }
+
+h1, .h1 {
+  font-size: 2.5rem;
+  margin-left: 40px;
+
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+}
+

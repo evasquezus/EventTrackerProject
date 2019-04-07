@@ -3,9 +3,7 @@ export interface Books {
   title: string;
   authorName: string;
   category: string;
-  dateOfPurchase: Date;
-
-  constructor();
+  dateOfPurchase?: string;
 }
 
 
